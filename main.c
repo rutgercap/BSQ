@@ -13,9 +13,10 @@ int main(int argc, char **argv)
     i = 0;
     while (i < argc)
     {
-        // read_file(argv[i]);
-        if (check_file == - 1)
-            return (1);
+        // if (read_file(argv[i]) == -1);
+        //      return(1);
+        // if (check_file == - 1)
+        //      return (1);
         // solution(file);
         // print_solution(file);
         ft_putchar('\n');
