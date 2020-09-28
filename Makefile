@@ -1,4 +1,4 @@
-FILES = main.c 
+FILES = main.c read_file.c
 
 FLAGS = -Wall -Werror -Wextra
 
@@ -6,11 +6,16 @@ LIB = library/libbsq
 
 OUTPUT = bsq
 
-compile: # Don't forget to remove ./output
-	gcc $(FLAGS) $(FILES) $(LIB) -o $(OUTPUT) && ./$(OUTPUT)
+TEST = example_file.txt
+
+compile: # Don't forget to remove the run
+	gcc $(FLAGS) $(FILES) $(LIB) -o $(OUTPUT) 
+	$(MAKE) run
 
 run:
-	./$(OUTPUT)
+	./$(OUTPUT) $(TEST)
+
+test2:
 
 fclean:
 	rm $(OUTPUT)

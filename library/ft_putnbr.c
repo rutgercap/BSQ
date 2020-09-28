@@ -6,13 +6,14 @@
 /*   By: rcappend <marvin@codam.nl>                   +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/09/16 19:11:22 by rcappend      #+#    #+#                 */
-/*   Updated: 2020/09/16 19:11:39 by rcappend      ########   odam.nl         */
+/*   Updated: 2020/09/28 13:50:04 by rcappend      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "ft_library.h"
 #include <unistd.h>
 
-void	ft_putchar(int number)
+void	ft_print_numb(int number)
 {
 	char c;
 
@@ -35,12 +36,12 @@ void	ft_putnbr(int nb)
 		}
 		if (nb <= 9)
 		{
-			ft_putchar(nb);
+			ft_print_numb(nb);
 		}
 		else
 		{
 			ft_putnbr(nb / 10);
-			ft_putchar(nb % 10);
+			ft_print_numb(nb % 10);
 		}
 	}
 }
